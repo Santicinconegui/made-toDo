@@ -1,0 +1,146 @@
+@import "../global/_color.scss";
+@import "../global/typography.scss";
+
+body {
+  background: #202020;
+  color: #fff;
+  font-family: $font-family_1;
+}
+.container-formulario {
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 55vh;
+  background-color: $background-color_login;
+  border-radius: 10px;
+  display: flex;
+  .textEndForm {
+    margin-top: 50px;
+    .Link {
+      color: $color_1;
+      text-decoration: none;
+    }
+  }
+  .wrap2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.container-formulario_register {
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  background-color: $background-color_login;
+  display: flex;
+  border-radius: 10px;
+  .textEndForm {
+    margin-top: 50px;
+    .Link {
+      color: $color_1;
+      text-decoration: none;
+    }
+  }
+}
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  border: none;
+}
+.wrap2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  min-height: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: $color_3;
+  width: 50%;
+}
+input {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 3px;
+}
+.emailRegister {
+  width: 100%;
+}
+.passwordRegister {
+  width: 100%;
+}
+.text-error {
+  color: $color_error;
+  font-weight: 600;
+  margin-top: 5px;
+  font-size: 15px;
+  text-decoration: underline 2px #000;
+}
+.btn--form_register {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  background: #0f0f0f;
+  color: $color_3;
+  box-shadow: 8px 10px 30px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.btn--form {
+  &:hover {
+    background: #485460;
+    color: $color_3;
+  }
+}
+.btn--form_register {
+  &:hover {
+    background: #485460;
+    color: $color_3;
+  }
+}
+
+.login--tittle {
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bolder;
+  text-decoration: underline 5px;
+}
+
+Link {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,46 @@
+@import "../global/_color.scss";
+
+nav {
+  display: inline-flex;
+  background-color: $background-navbar;
+  width: 100%;
+  padding: 15px;
+
+  h1 {
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 23px;
+    right: 0;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+    gap: 30px;
+  }
+  .Link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+  }
+  .icono {
+    font-size: 13px;
+  }
+  .LinkMade {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+  }
+  .Link:hover {
+    transition: 1s;
+    background-color: #485460;
+    border-radius: 5px 5px;
+  }
+}

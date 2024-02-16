@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     // this function makes a user registration request
     try {
       const res = await registerRequest(user);
-      console.log(res.data);
+      // console.log(res.data);
       setUser(res.data);
       setIsAuthenticated(true);
     } catch (error) {
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     // this function makes a login request
     try {
       const res = await loginRequest(user);
-      console.log(res);
+      // console.log(res);
       setIsAuthenticated(true);
       setUser(res.data);
     } catch (error) {
@@ -44,6 +44,14 @@ export const AuthProvider = ({ children }) => {
       }
       setErrors([error.response.data.message]);
     }
+  };
+  const logout = () => {
+    //the token is removed
+    Cookies.remove("token");
+    //change authentication status
+    setIsAuthenticated(false);
+    //user information is cleared
+    setUser(null);
   };
   useEffect(() => {
     // with this hook the error messages are eliminated
@@ -95,7 +103,15 @@ export const AuthProvider = ({ children }) => {
   }, []);
   return (
     <AuthContext.Provider
-      value={{ signup, signin, user, isAuthenticated, errors, loading }}>
+      value={{
+        signup,
+        signin,
+        logout,
+        user,
+        isAuthenticated,
+        errors,
+        loading,
+      }}>
       {children}
     </AuthContext.Provider>
   );

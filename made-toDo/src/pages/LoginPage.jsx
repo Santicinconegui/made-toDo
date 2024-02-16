@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/stylesComp/register.scss";
 import { useAuth } from "../context/AuthContext";
+import { useEffect } from "react";
 
 const LoginPage = () => {
   const {
@@ -9,10 +10,16 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { signin, errors: singinErrors } = useAuth();
+  const { signin, errors: singinErrors, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
+
+  useEffect(() => {
+    //if the user is authenticated
+    if (isAuthenticated) navigate("/");
+  }, [isAuthenticated]);
 
   return (
     <div className="container-formulario">

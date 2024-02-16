@@ -1,0 +1,21 @@
+@import "../global/_color.scss";
+
+.taskContainer {
+  display: inline-flex;
+  margin: 50px 20px 50px 20px;
+  .buttonCard {
+    color: #000;
+    background-color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+  }
+
+  .buttonCard:hover {
+    transition: 0.5s;
+    background-color: #485460;
+    color: #fff;
+  }
+}

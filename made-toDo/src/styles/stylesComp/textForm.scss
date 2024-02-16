@@ -1,0 +1,53 @@
+.formContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40%;
+  height: 50%;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  background-color: #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    .newTask {
+      background-color: #505050;
+      text-align: center;
+      color: #fff;
+      width: 90%;
+      font-size: 17px;
+    }
+    label {
+      text-align: center;
+    }
+    input[type="date"] {
+      width: 50%;
+      background-color: #505050;
+      color: #fff;
+    }
+    button {
+      padding: 15px 40px 15px 40px;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #485460;
+    }
+  }
+  textarea {
+    max-height: 200px;
+    min-height: 100px;
+  }
+}

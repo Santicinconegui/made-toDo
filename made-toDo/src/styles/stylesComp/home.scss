@@ -1,0 +1,42 @@
+@import "../global/_color.scss";
+
+.containerHomePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+
+  h2 {
+    font-size: 45px;
+    font-weight: 800;
+    user-select: none;
+
+    span {
+      color: $color-main;
+    }
+  }
+  .Link {
+    text-decoration: none;
+    color: $color-main;
+  }
+  h4 {
+    font-size: 27px;
+    font-weight: 600;
+    margin: 20px 10px 0px 100px;
+    text-decoration: underline $color-main 3px;
+    user-select: none;
+  }
+  p {
+    font-size: 23px;
+    text-align: center;
+    margin: 200px;
+    width: 100%;
+    span {
+      color: $color-main;
+      text-decoration: underline;
+    }
+  }
+  .backGround {
+    user-select: none;
+  }
+}

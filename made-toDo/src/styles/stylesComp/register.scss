@@ -2,10 +2,11 @@
 @import "../global/typography.scss";
 
 body {
-  background: #202020;
-  color: #fff;
-  font-family: $font-family_1;
+  background: #202020 !important;
+  color: #fff !important;
+  font-family: $font-family_1 !important;
 }
+
 .container-formulario {
   width: 20%;
   position: absolute;
@@ -30,6 +31,7 @@ body {
     flex-direction: column;
   }
 }
+
 .container-formulario_register {
   width: 30%;
   position: absolute;
